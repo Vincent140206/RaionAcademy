@@ -3,14 +3,10 @@ package com.example.raionacademy
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -36,7 +32,8 @@ fun AppScreen(navController: NavHostController = rememberNavController()) {
         AppObject.meja,
         AppObject.mio,
         AppObject.tipex,
-        AppObject.horeg
+        AppObject.horeg,
+        AppObject.parfum
     )
     LazyVerticalGrid(
         columns = GridCells.Fixed(2),

@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
                             backStackEntry ->
                         val name = backStackEntry.arguments?.getString("id")
                         if (name != null) {
-                            DetailScreen(name)
+                            DetailScreen()
                         } else {
                             Text("Name not found")
                         }

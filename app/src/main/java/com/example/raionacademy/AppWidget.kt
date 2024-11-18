@@ -82,3 +82,34 @@ fun AppWidget(
         }
     }
 }
+
+@Composable
+fun ProductDetailWidget(
+    appDetail: AppDetail = ProductDetail.sepatu
+) {
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.White)
+    ){
+        Card (
+            shape = RoundedCornerShape(
+                topStart = 16.dp,
+                topEnd = 16.dp,
+                bottomStart = 0.dp,
+                bottomEnd = 0.dp
+            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(120.dp)
+                .shadow(4.dp)
+        ){
+            AsyncImage(
+                model = appDetail.image,
+                contentDescription = appDetail.name,
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+        }
+    }
+}
