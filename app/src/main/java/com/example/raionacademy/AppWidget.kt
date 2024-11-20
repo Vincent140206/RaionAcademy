@@ -111,5 +111,17 @@ fun ProductDetailWidget(
                 contentScale = ContentScale.Crop
             )
         }
+        Column (
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight()
+                .padding(top = 6.dp, start = 3.dp)
+        ) {
+            Text(appDetail.name, fontSize = 16.sp, fontWeight = FontWeight.Bold)
+            Spacer(
+                modifier = Modifier.padding(1.dp)
+            )
+            Text(appDetail.rating, fontSize = 11.sp)
+        }
     }
 }

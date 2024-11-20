@@ -26,6 +26,7 @@ import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 
 @Composable
+@Preview
 fun DetailScreen(navController: NavHostController = rememberNavController()) {
     val appList = listOf(
         ProductDetail.sepatu,
