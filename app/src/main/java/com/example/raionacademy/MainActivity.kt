@@ -8,9 +8,11 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
 import com.example.raionacademy.ui.theme.RaionAcademyTheme
 
 class MainActivity : ComponentActivity() {
@@ -27,14 +29,8 @@ class MainActivity : ComponentActivity() {
                     composable("app_screen") {
                         AppScreen(navController)
                     }
-                    composable("detail_screen/{id}"){
-                            backStackEntry ->
-                        val name = backStackEntry.arguments?.getString("id")
-                        if (name != null) {
-                            DetailScreen()
-                        } else {
-                            Text("Name not found")
-                        }
+                    composable("detail_screen/{}") {
+                        DetailScreen()
                     }
                 }
             }
